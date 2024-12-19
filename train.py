@@ -14,13 +14,13 @@ from sklearn.pipeline import Pipeline
 if __name__ == "__main__":
 
     # Set your variables for your environment
-    EXPERIMENT_NAME="appointment_cancellation_detector"
+    #EXPERIMENT_NAME="appointment_cancellation_detector"
 
     # Set experiment's info 
-    mlflow.set_experiment(EXPERIMENT_NAME)
+    #mlflow.set_experiment(EXPERIMENT_NAME)
 
     # Get our experiment info
-    experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
+    #experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
 
     print("training model...")
     
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     ])
 
     # Log experiment to MLFlow
-    with mlflow.start_run(experiment_id = experiment.experiment_id) as run:
+    with mlflow.start_run() as run:
         model.fit(X_train, y_train)
         predictions = model.predict(X_train)
         
