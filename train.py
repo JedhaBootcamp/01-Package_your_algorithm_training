@@ -13,15 +13,6 @@ from sklearn.pipeline import Pipeline
 
 if __name__ == "__main__":
 
-    # Set your variables for your environment
-    #EXPERIMENT_NAME="appointment_cancellation_detector"
-
-    # Set experiment's info 
-    #mlflow.set_experiment(EXPERIMENT_NAME)
-
-    # Get our experiment info
-    #experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
-
     print("training model...")
     
     # Time execution
